@@ -99,12 +99,11 @@ function initDivineParticles() {
       this.speedY = Math.random() * 0.5 + 0.3;
       this.speedX = (Math.random() - 0.5) * 0.5;
       this.opacity = Math.random() * 0.5 + 0.3;
-      // Gadapa floral colors: pasupu base, terracotta flower, sacred white
+      // Pure Gadapa colors: Pasupu yellow, Bottu red, Bottu white only
       const colors = [
-        { h: 45, s: 88, l: 62 },   // Pasupu yellow
-        { h: 14, s: 75, l: 47 },   // Terracotta red
-        { h: 0, s: 0, l: 99 },     // Sacred white
-        { h: 120, s: 45, l: 35 }   // Leaf green
+        { h: 45, s: 91, l: 57 },   // Pasupu yellow
+        { h: 4, s: 63, l: 51 },    // Bottu red
+        { h: 0, s: 0, l: 100 }     // Bottu white
       ];
       const color = colors[Math.floor(Math.random() * colors.length)];
       this.hue = color.h;

@@ -1,15 +1,13 @@
 /* ===== CSS VARIABLES & RESET ===== */
 :root {
-  /* Telugu Gadapa (Threshold) Palette - From Authentic Art */
-  --pasupu-base: #F2C94C;      /* Warm turmeric yellow base from gadapa */
-  --terracotta-flower: #D84315; /* Terracotta red flowers */
-  --leaf-green: #2E7D32;       /* Deep leaf green */
-  --sacred-white: #FEFEFE;     /* Pure white bottu (dots) */
-  --coconut-brown: #6D4C41;    /* Coconut kalash brown */
-  --temple-brown: #3B1F14;
-  --sandalwood: #FFF8E1;       /* Lighter sandalwood to match warm base */
-  --marigold: #FF6F00;
-  --sacred-gold: linear-gradient(135deg, #F2C94C 0%, #FF6F00 100%);
+  /* Pure Telugu Gadapa Palette - Only 3 Sacred Colors */
+  --pasupu-yellow: #F4C430;    /* Pure turmeric yellow base */
+  --bottu-red: #D32F2F;        /* Sacred red kumkum bottu */
+  --bottu-white: #FFFFFF;      /* Pure white sacred dots */
+  
+  /* Neutral backgrounds (kept minimal) */
+  --bg-dark: #2A1810;
+  --text-light: #FFF8E1;
   
   /* Typography */
   --font-heading: 'Cinzel', serif;
@@ -42,8 +40,8 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: linear-gradient(135deg, #2d2419 0%, #3d2f1f 100%);
-  color: var(--sandalwood);
+  background: linear-gradient(135deg, #2A1810 0%, #3d2f1f 100%);
+  color: var(--text-light);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -59,7 +57,7 @@ body {
 .preloader {
   position: fixed;
   inset: 0;
-  background: var(--temple-brown);
+  background: var(--bg-dark);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,8 +76,8 @@ body {
   width: 80px;
   height: 80px;
   border: 3px solid transparent;
-  border-top-color: var(--terracotta-flower);
-  border-right-color: var(--pasupu-base);
+  border-top-color: var(--bottu-red);
+  border-right-color: var(--pasupu-yellow);
   border-radius: 50%;
   animation: spin 1.5s linear infinite;
 }
@@ -90,7 +88,7 @@ body {
 
 .preloader-text {
   margin-top: 1rem;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   font-size: 0.9rem;
   letter-spacing: 0.1em;
   animation: pulse 2s ease-in-out infinite;
@@ -107,10 +105,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(109, 76, 65, 0.95);
+  background: rgba(42, 24, 16, 0.95);
   backdrop-filter: blur(10px);
-  border-bottom: 3px solid var(--pasupu-base);
-  box-shadow: 0 2px 0 var(--terracotta-flower), 0 4px 0 var(--leaf-green);
+  border-bottom: 4px solid var(--pasupu-yellow);
+  box-shadow: 
+    0 4px 0 var(--bottu-red),
+    0 4px 10px rgba(244, 196, 48, 0.3);
   z-index: 1000;
   transition: background 0.3s ease;
 }
@@ -129,7 +129,7 @@ body {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 700;
@@ -156,7 +156,7 @@ body {
   display: block;
   width: 28px;
   height: 2px;
-  background: var(--pasupu-base);
+  background: var(--pasupu-yellow);
   position: relative;
   transition: background 0.3s ease;
 }
@@ -167,7 +167,7 @@ body {
   position: absolute;
   width: 28px;
   height: 2px;
-  background: var(--pasupu-base);
+  background: var(--pasupu-yellow);
   transition: transform 0.3s ease;
 }
 
@@ -194,7 +194,7 @@ body {
 }
 
 .nav-link {
-  color: var(--sandalwood);
+  color: var(--text-light);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
@@ -209,13 +209,13 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--pasupu-base);
+  background: var(--pasupu-yellow);
   transition: width var(--transition-smooth);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
 }
 
 .nav-link:hover::after,
@@ -225,18 +225,21 @@ body {
 
 .btn-book {
   padding: 0.6rem 1.5rem;
-  background: var(--sacred-gold);
-  color: var(--temple-brown);
+  background: var(--pasupu-yellow);
+  color: var(--bg-dark);
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
   font-size: 0.9rem;
+  border: 2px solid var(--bottu-red);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .btn-book:hover {
   transform: translateY(-2px);
-  box-shadow: var(--glow-gold);
+  box-shadow: 0 0 20px rgba(244, 196, 48, 0.6);
+  background: var(--bottu-white);
+  color: var(--bottu-red);
 }
 
 /* ===== HERO SECTION ===== */
@@ -288,7 +291,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, var(--pasupu-base) 0%, var(--marigold) 100%);
+  background: linear-gradient(135deg, var(--pasupu-yellow) 0%, var(--bottu-red) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -314,7 +317,7 @@ body {
 
 .hero-subtitle {
   font-size: clamp(1rem, 2vw, 1.3rem);
-  color: var(--sandalwood);
+  color: var(--text-light);
   margin-bottom: 2.5rem;
   opacity: 0;
   animation: fadeUp 1s ease 0.4s forwards;
@@ -342,25 +345,29 @@ body {
 }
 
 .btn-primary {
-  background: var(--sacred-gold);
-  color: var(--temple-brown);
-  box-shadow: var(--shadow-soft);
+  background: var(--pasupu-yellow);
+  color: var(--bg-dark);
+  box-shadow: 0 4px 15px rgba(244, 196, 48, 0.3);
+  border: 2px solid var(--bottu-red);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: var(--glow-gold);
+  box-shadow: 0 6px 25px rgba(244, 196, 48, 0.5);
+  background: var(--bottu-white);
+  color: var(--bottu-red);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--pasupu-base);
-  border: 2px solid var(--pasupu-base);
+  color: var(--pasupu-yellow);
+  border: 2px solid var(--pasupu-yellow);
 }
 
 .btn-secondary:hover {
-  background: var(--pasupu-base);
-  color: var(--temple-brown);
+  background: var(--pasupu-yellow);
+  color: var(--bg-dark);
+  border-color: var(--bottu-red);
 }
 
 .scroll-hint {
@@ -372,7 +379,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   font-size: 0.85rem;
   opacity: 0.7;
   animation: bounce 2s ease-in-out infinite;
@@ -398,7 +405,7 @@ body {
   display: inline-block;
   padding: 0.5rem 1.5rem;
   background: rgba(255, 193, 7, 0.1);
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 600;
@@ -410,13 +417,13 @@ body {
 .section-title {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 1rem;
 }
 
 .section-desc {
   font-size: 1.1rem;
-  color: var(--sandalwood);
+  color: var(--text-light);
   max-width: 700px;
   margin: 0 auto;
   opacity: 0.9;
@@ -424,9 +431,9 @@ body {
 
 /* ===== GLASS TEMPLE CARD ===== */
 .glass-temple {
-  background: rgba(109, 76, 65, 0.6);
+  background: rgba(42, 24, 16, 0.7);
   backdrop-filter: blur(10px);
-  border: 2px solid var(--pasupu-base);
+  border: 3px solid var(--pasupu-yellow);
   border-radius: 16px;
   padding: 2rem;
   transition: all var(--transition-smooth);
@@ -434,31 +441,34 @@ body {
   overflow: hidden;
 }
 
+/* Gadapa floral vine pattern - exact replication */
 .glass-temple::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 8px;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--terracotta-flower) 0px,
-    var(--terracotta-flower) 10px,
-    var(--sacred-white) 10px,
-    var(--sacred-white) 15px,
-    var(--leaf-green) 15px,
-    var(--leaf-green) 25px,
-    var(--sacred-white) 25px,
-    var(--sacred-white) 30px
-  );
-  opacity: 0.7;
+  height: 12px;
+  background: 
+    /* Red flowers */
+    radial-gradient(circle at 15px 6px, var(--bottu-red) 3px, transparent 4px),
+    radial-gradient(circle at 55px 6px, var(--bottu-red) 3px, transparent 4px),
+    radial-gradient(circle at 95px 6px, var(--bottu-red) 3px, transparent 4px),
+    /* White bottu dots */
+    radial-gradient(circle at 25px 6px, var(--bottu-white) 2px, transparent 3px),
+    radial-gradient(circle at 35px 6px, var(--bottu-white) 2px, transparent 3px),
+    radial-gradient(circle at 65px 6px, var(--bottu-white) 2px, transparent 3px),
+    radial-gradient(circle at 75px 6px, var(--bottu-white) 2px, transparent 3px),
+    /* Pasupu base */
+    var(--pasupu-yellow);
+  background-size: 100px 12px;
+  background-repeat: repeat-x;
 }
 
 .glass-temple:hover {
   transform: translateY(-5px);
-  border-color: var(--terracotta-flower);
-  box-shadow: 0 8px 30px rgba(242, 201, 76, 0.3);
+  border-color: var(--bottu-red);
+  box-shadow: 0 8px 30px rgba(244, 196, 48, 0.4);
 }
 
 /* ===== HERITAGE SECTION ===== */
@@ -481,12 +491,12 @@ body {
 .heritage-card h3 {
   font-family: var(--font-heading);
   font-size: 1.5rem;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 1rem;
 }
 
 .heritage-card p {
-  color: var(--sandalwood);
+  color: var(--text-light);
   opacity: 0.9;
 }
 
@@ -508,12 +518,12 @@ body {
   font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 700;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: var(--sandalwood);
+  color: var(--text-light);
   margin-top: 0.5rem;
 }
 
@@ -538,18 +548,18 @@ body {
 .venue-info h3 {
   font-family: var(--font-heading);
   font-size: 1.6rem;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 0.5rem;
 }
 
 .venue-capacity {
   font-size: 0.9rem;
-  color: var(--marigold);
+  color: var(--pasupu-yellow);
   margin-bottom: 1rem;
 }
 
 .venue-desc {
-  color: var(--sandalwood);
+  color: var(--text-light);
   margin-bottom: 1rem;
   opacity: 0.9;
 }
@@ -560,7 +570,7 @@ body {
 }
 
 .venue-features li {
-  color: var(--sandalwood);
+  color: var(--text-light);
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
@@ -569,17 +579,17 @@ body {
   display: inline-block;
   padding: 0.7rem 1.8rem;
   background: transparent;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   text-decoration: none;
-  border: 2px solid var(--pasupu-base);
+  border: 2px solid var(--pasupu-yellow);
   border-radius: 50px;
   font-weight: 600;
   transition: all var(--transition-smooth);
 }
 
 .btn-venue:hover {
-  background: var(--pasupu-base);
-  color: var(--temple-brown);
+  background: var(--pasupu-yellow);
+  color: var(--bg-dark);
 }
 
 /* ===== SERVICES SECTION ===== */
@@ -601,12 +611,12 @@ body {
 .service-card h3 {
   font-family: var(--font-heading);
   font-size: 1.3rem;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 1rem;
 }
 
 .service-card p {
-  color: var(--sandalwood);
+  color: var(--text-light);
   opacity: 0.9;
   font-size: 0.95rem;
 }
@@ -630,7 +640,7 @@ body {
 }
 
 .gallery-item:focus {
-  outline: 3px solid var(--pasupu-base);
+  outline: 3px solid var(--pasupu-yellow);
   outline-offset: 4px;
 }
 
@@ -661,7 +671,7 @@ body {
   position: absolute;
   background: rgba(255, 193, 7, 0.2);
   border: none;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   font-size: 2rem;
   cursor: pointer;
   padding: 1rem;
@@ -732,20 +742,20 @@ body {
 .blessing-text {
   font-size: 1.2rem;
   font-style: italic;
-  color: var(--sandalwood);
+  color: var(--text-light);
   margin-bottom: 1.5rem;
   line-height: 1.8;
 }
 
 .blessing-author {
   font-weight: 600;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 0.5rem;
 }
 
 .blessing-event {
   font-size: 0.9rem;
-  color: var(--marigold);
+  color: var(--pasupu-yellow);
 }
 
 .slider-dots {
@@ -765,7 +775,7 @@ body {
 }
 
 .dot.active {
-  background: var(--pasupu-base);
+  background: var(--pasupu-yellow);
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -779,12 +789,12 @@ body {
 .contact-info h3 {
   font-family: var(--font-heading);
   font-size: 1.8rem;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 1.5rem;
 }
 
 .contact-info p {
-  color: var(--sandalwood);
+  color: var(--text-light);
   margin-bottom: 1rem;
   font-size: 1.05rem;
 }
@@ -795,7 +805,7 @@ body {
 
 .contact-hours h4 {
   font-family: var(--font-heading);
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 0.5rem;
 }
 
@@ -809,7 +819,7 @@ body {
 
 .form-group label {
   display: block;
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
@@ -822,7 +832,7 @@ body {
   background: rgba(233, 217, 199, 0.1);
   border: 1px solid rgba(255, 193, 7, 0.3);
   border-radius: 8px;
-  color: var(--sandalwood);
+  color: var(--text-light);
   font-family: var(--font-body);
   font-size: 1rem;
   transition: border-color var(--transition-fast);
@@ -831,15 +841,15 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--pasupu-base);
+  border-color: var(--pasupu-yellow);
 }
 
 .btn-submit {
   width: 100%;
   padding: 1rem;
-  background: var(--sacred-gold);
-  color: var(--temple-brown);
-  border: none;
+  background: var(--pasupu-yellow);
+  color: var(--bg-dark);
+  border: 2px solid var(--bottu-red);
   border-radius: 50px;
   font-weight: 600;
   font-size: 1.05rem;
@@ -849,7 +859,9 @@ body {
 
 .btn-submit:hover {
   transform: translateY(-2px);
-  box-shadow: var(--glow-gold);
+  box-shadow: 0 6px 25px rgba(244, 196, 48, 0.5);
+  background: var(--bottu-white);
+  color: var(--bottu-red);
 }
 
 /* ===== FOOTER ===== */
@@ -868,13 +880,13 @@ body {
 
 .footer-col h4 {
   font-family: var(--font-heading);
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
   margin-bottom: 1rem;
 }
 
 .footer-col p,
 .footer-col a {
-  color: var(--sandalwood);
+  color: var(--text-light);
   text-decoration: none;
   font-size: 0.95rem;
   opacity: 0.9;
@@ -882,7 +894,7 @@ body {
 }
 
 .footer-col a:hover {
-  color: var(--pasupu-base);
+  color: var(--pasupu-yellow);
 }
 
 .footer-col ul {
@@ -897,7 +909,7 @@ body {
   text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 193, 7, 0.1);
-  color: var(--sandalwood);
+  color: var(--text-light);
   font-size: 0.9rem;
   opacity: 0.8;
 }
@@ -909,16 +921,16 @@ body {
   right: 2rem;
   width: 50px;
   height: 50px;
-  background: var(--sacred-gold);
-  border: none;
+  background: var(--pasupu-yellow);
+  border: 2px solid var(--bottu-red);
   border-radius: 50%;
-  color: var(--temple-brown);
+  color: var(--bg-dark);
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-smooth);
   z-index: 999;
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 4px 15px rgba(244, 196, 48, 0.3);
 }
 
 .back-to-top.visible {
@@ -928,7 +940,9 @@ body {
 
 .back-to-top:hover {
   transform: translateY(-5px);
-  box-shadow: var(--glow-gold);
+  box-shadow: 0 6px 25px rgba(244, 196, 48, 0.5);
+  background: var(--bottu-white);
+  color: var(--bottu-red);
 }
 
 /* ===== RESPONSIVE ===== */
