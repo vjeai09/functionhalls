@@ -99,7 +99,17 @@ function initDivineParticles() {
       this.speedY = Math.random() * 0.5 + 0.3;
       this.speedX = (Math.random() - 0.5) * 0.5;
       this.opacity = Math.random() * 0.5 + 0.3;
-      this.hue = Math.random() > 0.5 ? 30 : 45; // Orange/gold hues
+      // Gadapa floral colors: pasupu base, terracotta flower, sacred white
+      const colors = [
+        { h: 45, s: 88, l: 62 },   // Pasupu yellow
+        { h: 14, s: 75, l: 47 },   // Terracotta red
+        { h: 0, s: 0, l: 99 },     // Sacred white
+        { h: 120, s: 45, l: 35 }   // Leaf green
+      ];
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      this.hue = color.h;
+      this.saturation = color.s;
+      this.lightness = color.l;
     }
     
     update() {
@@ -115,7 +125,7 @@ function initDivineParticles() {
     draw() {
       ctx.save();
       ctx.globalAlpha = this.opacity;
-      ctx.fillStyle = `hsl(${this.hue}, 100%, 60%)`;
+      ctx.fillStyle = `hsl(${this.hue}, ${this.saturation}%, ${this.lightness}%)`;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
