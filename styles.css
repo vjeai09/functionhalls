@@ -1,12 +1,12 @@
 /* ===== CSS VARIABLES & RESET ===== */
 :root {
-  /* Sacred Palette */
-  --kumkum: #C21807;
-  --pasupu: #FFC107;
+  /* Sacred Palette - Authentic Kumkum & Pasupu */
+  --kumkum: #D32F2F;        /* True kumkum: deep vermillion red with warmth */
+  --pasupu: #F9A825;        /* True pasupu: rich turmeric yellow-orange */
   --temple-brown: #3B1F14;
   --sandalwood: #E9D9C7;
-  --marigold: #FF8513;
-  --sacred-gold: linear-gradient(135deg, #FFC107 0%, #FF8513 100%);
+  --marigold: #FF6F00;      /* Deeper marigold orange */
+  --sacred-gold: linear-gradient(135deg, #F9A825 0%, #FF6F00 100%);
   
   /* Typography */
   --font-heading: 'Cinzel', serif;
