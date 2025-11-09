@@ -318,13 +318,12 @@ body:hover .cursor-dot {
 .nav-link::before {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 50%;
+    bottom: -10px;
+    left: 0;
     width: 0;
     height: 2px;
     background: var(--gradient-luxury);
     transition: width 0.3s var(--ease-luxury);
-    transform: translateX(-50%);
 }
 
 .nav-link:hover::before,
