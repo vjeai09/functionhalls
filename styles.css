@@ -2,7 +2,7 @@
 :root {
   /* Pure Telugu Gadapa Palette - Only 3 Sacred Colors */
   --pasupu-yellow: #F4C430;    /* Pure turmeric yellow base */
-  --bottu-red: #D32F2F;        /* Sacred red kumkum bottu */
+  --bottu-red: #D32F2F;        /* Sacred red bottu */
   --bottu-white: #FFFFFF;      /* Pure white sacred dots */
   
   /* Neutral backgrounds (kept minimal) */
@@ -21,10 +21,10 @@
   --transition-fast: 0.2s ease;
   --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   
-  /* Shadows */
-  --shadow-soft: 0 4px 20px rgba(194, 24, 7, 0.1);
-  --shadow-lifted: 0 8px 30px rgba(194, 24, 7, 0.15);
-  --glow-gold: 0 0 20px rgba(255, 193, 7, 0.3);
+  /* Shadows - Gadapa themed */
+  --shadow-soft: 0 4px 20px rgba(244, 196, 48, 0.2);
+  --shadow-lifted: 0 8px 30px rgba(244, 196, 48, 0.25);
+  --glow-yellow: 0 0 20px rgba(244, 196, 48, 0.4);
 }
 
 * {
@@ -251,8 +251,8 @@ body {
   justify-content: center;
   text-align: center;
   overflow: hidden;
-  background: radial-gradient(ellipse at center, rgba(242, 201, 76, 0.15) 0%, transparent 70%),
-              linear-gradient(135deg, #2d2419 0%, #3d2f1f 100%);
+  background: radial-gradient(ellipse at center, rgba(244, 196, 48, 0.15) 0%, transparent 70%),
+              linear-gradient(135deg, #2A1810 0%, #3d2f1f 100%);
 }
 
 .divine-particles {

@@ -1,12 +1,18 @@
-# S V Banquet Halls – Devotional Website (v3)
+# S V Banquet Halls – Pure Telugu Gadapa Theme (v3)
 
 ## Overview
-Divine celebration venue website fusing **South Indian Balaji traditions** with **Gen Z addictive interactions**. Built with pure HTML/CSS/JS + GSAP for scroll choreography.
+Divine celebration venue website using **authentic Telugu gadapa (threshold) colors only** - pure pasupu yellow, sacred bottu red, and ritual white dots from traditional South Indian home decoration.
 
 ---
 
-## Features
-- **Sacred Palette**: Kumkum (#C21807) & Pasupu (#FFC107) with marigold/silk accents
+## Pure Gadapa Color Palette (Only 3 Colors)
+🟡 **Pasupu Yellow**: `#F4C430` - Pure turmeric yellow base (threshold foundation)  
+🔴 **Bottu Red**: `#D32F2F` - Sacred red kumkum dots (floral accents)  
+⚪ **Bottu White**: `#FFFFFF` - Pure white sacred dots (ritual marks)  
+
+**No other colors used** - this is a strict 3-color devotional theme inspired by authentic Telugu threshold art.
+
+---
 - **Divine Particles**: Canvas ember/petal drift animation
 - **GSAP Scroll Magic**: Section reveals, card staggers, counter animations
 - **Immersive Hero**: Aura pulse, title stagger, smooth CTA reveal
