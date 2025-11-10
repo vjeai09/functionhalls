@@ -390,6 +390,7 @@ body:hover .cursor-dot {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding-top: 0;
     background: 
         linear-gradient(135deg, rgba(45, 27, 61, 0.95) 0%, rgba(10, 10, 15, 0.9) 100%),
         url('https://images.unsplash.com/photo-1519167758481-83f29da8c2e7?w=1920') center/cover fixed;
@@ -482,7 +483,7 @@ body:hover .cursor-dot {
     font-size: clamp(60px, 10vw, 140px);
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     perspective: 1000px;
 }
 
@@ -513,7 +514,7 @@ body:hover .cursor-dot {
 .hero-subtitle {
     font-size: clamp(18px, 2.5vw, 28px);
     color: var(--champagne);
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     letter-spacing: 3px;
     font-weight: 300;
     line-height: 1.8;
@@ -858,8 +859,17 @@ body:hover .cursor-dot {
         right: 0;
     }
     
+    .hero-content {
+        padding: 0 30px;
+    }
+    
     .hero-title {
         font-size: 50px;
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
     }
     
     .hero-buttons {
@@ -891,6 +901,46 @@ body:hover .cursor-dot {
     
     .float-ring {
         display: none;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content {
+        padding: 0 50px;
+    }
+    
+    .hero-title {
+        font-size: 60px;
+    }
+    
+    .nav-container {
+        padding: 0 40px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 0 20px;
+    }
+    
+    .hero-title {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .nav-container {
+        padding: 0 30px;
+    }
+    
+    .navbar {
+        padding: 20px 0;
     }
 }
 
