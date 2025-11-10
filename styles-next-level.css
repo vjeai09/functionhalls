@@ -840,6 +840,20 @@ body:hover .cursor-dot {
         display: none;
     }
     
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .logo-text {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+    
+    .logo-subtext {
+        font-size: 8px;
+        letter-spacing: 4px;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 0;
@@ -859,28 +873,44 @@ body:hover .cursor-dot {
         right: 0;
     }
     
+    .hero {
+        padding-top: 80px;
+    }
+    
     .hero-content {
-        padding: 0 30px;
+        padding: 0 25px;
     }
     
     .hero-title {
-        font-size: 50px;
+        font-size: 42px;
+        line-height: 1.15;
+        margin-bottom: 35px;
+    }
+    
+    .word-wrapper {
+        margin: 0 10px;
     }
     
     .hero-subtitle {
-        font-size: 16px;
-        margin-bottom: 30px;
+        font-size: 15px;
+        margin-bottom: 40px;
+        letter-spacing: 1.5px;
+        line-height: 1.6;
     }
     
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 18px;
+        margin-bottom: 50px;
     }
     
     .btn {
         width: 100%;
-        max-width: 320px;
+        max-width: 280px;
         justify-content: center;
+        padding: 16px 30px;
+        font-size: 13px;
     }
     
     .hero-metrics {
@@ -921,26 +951,57 @@ body:hover .cursor-dot {
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
+    .navbar {
+        padding: 12px 0;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+    
+    .logo-subtext {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+    
+    .hero {
+        padding-top: 70px;
+    }
+    
     .hero-content {
         padding: 0 20px;
     }
     
     .hero-title {
-        font-size: 36px;
+        font-size: 34px;
         line-height: 1.2;
+        margin-bottom: 30px;
+    }
+    
+    .word-wrapper {
+        margin: 0 8px;
     }
     
     .hero-subtitle {
-        font-size: 14px;
-        margin-bottom: 25px;
+        font-size: 13px;
+        margin-bottom: 35px;
+        letter-spacing: 1px;
+    }
+    
+    .btn {
+        padding: 14px 25px;
+        font-size: 12px;
+        max-width: 260px;
+    }
+    
+    .hero-buttons {
+        gap: 15px;
+        margin-bottom: 40px;
     }
     
     .nav-container {
-        padding: 0 30px;
-    }
-    
-    .navbar {
-        padding: 20px 0;
+        padding: 0 20px;
     }
 }
 
