@@ -874,7 +874,7 @@ body:hover .cursor-dot {
     }
     
     .hero {
-        padding-top: 80px;
+        padding-top: 120px;
     }
     
     .hero-content {
@@ -882,9 +882,9 @@ body:hover .cursor-dot {
     }
     
     .hero-title {
-        font-size: 42px;
+        font-size: 38px;
         line-height: 1.15;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
     }
     
     .word-wrapper {
@@ -966,7 +966,7 @@ body:hover .cursor-dot {
     }
     
     .hero {
-        padding-top: 70px;
+        padding-top: 100px;
     }
     
     .hero-content {
@@ -974,9 +974,9 @@ body:hover .cursor-dot {
     }
     
     .hero-title {
-        font-size: 34px;
+        font-size: 32px;
         line-height: 1.2;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     
     .word-wrapper {
