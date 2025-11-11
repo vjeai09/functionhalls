@@ -293,28 +293,28 @@ class HeroTextAnimation {
             y: 0,
             rotateX: 0,
             opacity: 1,
-            duration: 1.2,
-            stagger: 0.03,
+            duration: 0.2,
+            stagger: 0,
             ease: 'power4.out',
-            delay: 3.5
+            delay: 0
         });
-        
+
         // Animate subtitle
         gsap.to(this.subtitle, {
             opacity: 1,
             y: 0,
-            duration: 1,
-            delay: 4.5,
+            duration: 0.2,
+            delay: 0,
             ease: 'power2.out'
         });
-        
+
         // Animate buttons
         gsap.to('[data-scroll-reveal]', {
             opacity: 1,
             y: 0,
-            duration: 1,
-            stagger: 0.2,
-            delay: 5,
+            duration: 0.2,
+            stagger: 0,
+            delay: 0,
             ease: 'power2.out'
         });
     }
@@ -742,18 +742,16 @@ window.addEventListener('DOMContentLoaded', () => {
     new CursorTrail();
     new WebGLBackground();
     
-    // Animations
-    setTimeout(() => {
-        new HeroTextAnimation();
-        new MagneticButton();
-        new NavigationEffects();
-        new StatsCounter();
-        new Enhanced3DTilt();
-        new ScrollRevealAnimations();
-        new ParallaxEffects();
-        new FloatingMagic();
-        new FormHandler();
-    }, 3500);
+    // Animations (no delay)
+    new HeroTextAnimation();
+    new MagneticButton();
+    new NavigationEffects();
+    new StatsCounter();
+    new Enhanced3DTilt();
+    new ScrollRevealAnimations();
+    new ParallaxEffects();
+    new FloatingMagic();
+    new FormHandler();
 });
 
 // ========================================
