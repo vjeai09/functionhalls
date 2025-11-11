@@ -219,9 +219,60 @@ body {
     background: linear-gradient(135deg, rgba(15, 15, 30, 0.8) 0%, rgba(26, 26, 46, 0.9) 100%);
 }
 
+/* Floating 3D Rings */
+.floating-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1 !important;
+}
+
+.float-ring {
+    position: absolute;
+    border: 2px solid rgba(212, 175, 55, 0.2);
+    border-radius: 50%;
+    animation: float 8s ease-in-out infinite;
+}
+
+.float-ring:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.float-ring:nth-child(2) {
+    width: 500px;
+    height: 500px;
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+.float-ring:nth-child(3) {
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) scale(1.1);
+        opacity: 0.6;
+    }
+}
+
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2 !important;
     text-align: center;
     max-width: 1000px;
     padding: 0 20px;
