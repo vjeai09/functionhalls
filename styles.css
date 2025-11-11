@@ -3,24 +3,7 @@
 ======================================== */
 * {
     margin: 0;
-    /*
-     * styles.css
-     * Unified premium luxury banquet hall stylesheet
-     * All hero, global, and premium styles are now in this file.
-     * (c) 2025 S V Banquet Halls
-     */
-
-    /* --- Begin Unified Styles --- */
-
-    /*
-        All content below is from styles-next-level.css
-        (see previous attachment for full content)
-    */
-
-    /* ========================================
-        INTRO SPARKLE ANIMATION & TAGLINE
-    ======================================== */
-    .intro-sparkle-wrapper {
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -132,7 +115,6 @@ body {
     font-weight: 800;
     background: var(--gradient-secondary);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 2px;
 }
@@ -230,9 +212,20 @@ body {
     background-attachment: fixed;
 }
 
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15, 15, 30, 0.8) 0%, rgba(26, 26, 46, 0.9) 100%);
+}
 
-
-
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
 
 .hero-title {
     font-family: var(--font-display);
@@ -246,7 +239,6 @@ body {
     display: block;
     background: linear-gradient(135deg, #fff 0%, #f5576c 100%);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: slideInLeft 1s ease-out both;
 }
@@ -388,7 +380,6 @@ body {
     font-weight: 800;
     background: var(--gradient-secondary);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
 }
@@ -428,7 +419,6 @@ body {
     margin-bottom: 20px;
     background: linear-gradient(135deg, #fff 0%, #f5576c 100%);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -776,7 +766,6 @@ body {
     margin-bottom: 20px;
     background: linear-gradient(135deg, #fff 0%, #f5576c 100%);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -924,7 +913,6 @@ body {
     margin-bottom: 20px;
     background: var(--gradient-secondary);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
