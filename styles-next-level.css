@@ -463,11 +463,12 @@ body:hover .cursor-dot {
         url('https://images.unsplash.com/photo-1519167758481-83f29da8c2e7?w=1920') center/cover fixed;
 }
 
+
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at 50% 50%, transparent 0%, var(--midnight) 100%);
-    z-index: 1;
+    z-index: 0 !important;
 }
 
 /* Floating 3D Rings */
@@ -475,7 +476,7 @@ body:hover .cursor-dot {
     position: absolute;
     inset: 0;
     pointer-events: none;
-    z-index: 2;
+    z-index: 1 !important;
 }
 
 .float-ring {
@@ -523,7 +524,7 @@ body:hover .cursor-dot {
 
 .hero-content {
     position: relative;
-    z-index: 3;
+    z-index: 2 !important;
     text-align: center;
     max-width: 1200px;
     padding: 0 40px;
