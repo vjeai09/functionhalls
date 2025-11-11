@@ -720,6 +720,22 @@ class FormHandler {
 // INITIALIZE EVERYTHING
 // ========================================
 window.addEventListener('DOMContentLoaded', () => {
+    // Add sparkles to intro overlay
+    const introSparkles = document.querySelector('.intro-sparkles');
+    if (introSparkles) {
+        const sparkleCount = 10;
+        for (let i = 0; i < sparkleCount; i++) {
+            const s = document.createElement('div');
+            s.className = 'sparkle';
+            s.style.left = (10 + Math.random() * 80) + '%';
+            s.style.top = (10 + Math.random() * 80) + '%';
+            s.style.animationDelay = (Math.random() * 1.5) + 's';
+            s.style.animationDuration = (1.2 + Math.random() * 1.2) + 's';
+            s.style.opacity = 0.5 + Math.random() * 0.5;
+            s.style.width = s.style.height = (8 + Math.random() * 10) + 'px';
+            introSparkles.appendChild(s);
+        }
+    }
     // Core experience
     new CinematicIntro();
     new LuxuryCursor();
