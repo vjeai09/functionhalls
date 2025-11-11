@@ -28,10 +28,14 @@ class CinematicIntro {
             onComplete: () => {
                 this.intro.classList.add('fade-out');
                 document.body.style.overflow = '';
-                setTimeout(() => this.intro.remove(), 1000);
+                // Remove the overlay as soon as fade-out starts
+                setTimeout(() => {
+                    if (this.intro && this.intro.parentNode) {
+                        this.intro.parentNode.removeChild(this.intro);
+                    }
+                }, 400); // fade-out duration (match CSS if needed)
             }
         });
-        
         tl.to('.luxury-loader', {
             opacity: 0,
             scale: 0.8,
@@ -39,18 +43,12 @@ class CinematicIntro {
             delay: 2.5,
             ease: 'power2.in'
         })
-        .to('.intro-title', {
-            y: -50,
+        .to('.intro-title, .intro-sparkle-wrapper, .intro-tagline', {
+            y: -40,
             opacity: 0,
-            duration: 0.6,
+            duration: 0.4,
             ease: 'power2.in'
-        }, '-=0.4')
-        .to('.intro-tagline', {
-            y: -30,
-            opacity: 0,
-            duration: 0.6,
-            ease: 'power2.in'
-        }, '-=0.5');
+        }, '-=0.3');
     }
 }
 
