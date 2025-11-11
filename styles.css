@@ -3,7 +3,24 @@
 ======================================== */
 * {
     margin: 0;
-    padding: 0;
+    /*
+     * styles.css
+     * Unified premium luxury banquet hall stylesheet
+     * All hero, global, and premium styles are now in this file.
+     * (c) 2025 S V Banquet Halls
+     */
+
+    /* --- Begin Unified Styles --- */
+
+    /*
+        All content below is from styles-next-level.css
+        (see previous attachment for full content)
+    */
+
+    /* ========================================
+        INTRO SPARKLE ANIMATION & TAGLINE
+    ======================================== */
+    .intro-sparkle-wrapper {
     box-sizing: border-box;
 }
 
