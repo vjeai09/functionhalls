@@ -5,20 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="S V Banquet Halls - Hyderabad's Most Magical Venue for Your Dream Events">
     <title>S V Banquet Halls | Where Dreams Come Alive - Hyderabad</title>
-    <link rel="stylesheet" href="styles-next-level.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="performance-boost.css">
+    
+    <!-- Inline Critical CSS for instant render -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #FF6B9D;
+            --dark: #0F0F1E;
+            --dark-2: #1A1A2E;
+            --light: #FFFFFF;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+            color: var(--light);
+        }
+        .cinematic-intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 15, 30, 0.8) 0%, rgba(26, 26, 46, 0.9) 100%);
+        }
+    </style>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@400;600&display=swap" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Main CSS (optimized and consolidated) -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Async load non-critical CSS -->
+    <link rel="preload" href="styles-next-level.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles-next-level.css"></noscript>
+    
+    <!-- Load fonts async -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- GSAP for next-level animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    
-    <!-- Three.js for 3D effects -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
     <!-- 3D Canvas Background -->
@@ -177,7 +222,7 @@
             <div class="venues-grid">
                 <div class="venue-card" data-tilt>
                     <div class="venue-image">
-                        <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2e7?w=800" alt="Grand Ballroom">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2e7?w=800" alt="Grand Ballroom" loading="lazy">
                         <div class="venue-overlay">
                             <button class="venue-btn">View Details</button>
                         </div>
@@ -196,7 +241,7 @@
 
                 <div class="venue-card" data-tilt>
                     <div class="venue-image">
-                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800" alt="Royal Pavilion">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800" alt="Royal Pavilion" loading="lazy">
                         <div class="venue-overlay">
                             <button class="venue-btn">View Details</button>
                         </div>
@@ -215,7 +260,7 @@
 
                 <div class="venue-card" data-tilt>
                     <div class="venue-image">
-                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Crystal Hall">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800" alt="Crystal Hall" loading="lazy">
                         <div class="venue-overlay">
                             <button class="venue-btn">View Details</button>
                         </div>
@@ -286,37 +331,37 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Wedding Setup">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Wedding Setup" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-title">Dreamy Wedding Setup</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="decor">
-                    <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600" alt="Elegant Decor">
+                    <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=600" alt="Elegant Decor" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-title">Elegant Decoration</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="venue">
-                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600" alt="Venue Interior">
+                    <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=600" alt="Venue Interior" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-title">Luxurious Interiors</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600" alt="Reception">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600" alt="Reception" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-title">Grand Reception</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="decor">
-                    <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600" alt="Lighting">
+                    <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600" alt="Lighting" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-title">Magical Lighting</span>
                     </div>
                 </div>
                 <div class="gallery-item" data-category="venue">
-                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600" alt="Outdoor Venue">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600" alt="Outdoor Venue" loading="lazy">
                     <div class="gallery-overlay">
                         <span class="gallery-title">Outdoor Paradise</span>
                     </div>
@@ -496,7 +541,34 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop">↑</button>
 
-    <script src="script-next-level.js"></script>
-    <script src="script.js"></script>
+    <!-- Defer all JavaScript for better performance -->
+    <script defer src="script.js"></script>
+    <script defer src="script-next-level.js"></script>
+    
+    <!-- Load GSAP and animations async after page load -->
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <!-- Inline performance tracking and fast intro animation -->
+    <script>
+        // Track performance
+        window.addEventListener('load', function() {
+            const perfData = performance.timing;
+            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+            console.log('Page Load Time: ' + pageLoadTime + 'ms');
+        });
+        
+        // Fast intro animation while scripts load
+        document.addEventListener('DOMContentLoaded', function() {
+            const intro = document.querySelector('.cinematic-intro');
+            if (intro) {
+                setTimeout(function() {
+                    intro.style.opacity = '0';
+                    intro.style.pointerEvents = 'none';
+                }, 2000);
+            }
+        });
+    </script>
 </body>
 </html>
